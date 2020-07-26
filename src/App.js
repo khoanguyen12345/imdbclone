@@ -26,7 +26,7 @@ const callMovie = async()=>{
 }
 useEffect(()=>{
   callMovie()
-},[0])
+},[urlState,page,title])
 
   if (movieList==null){
     return( 
