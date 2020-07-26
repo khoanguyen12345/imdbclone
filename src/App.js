@@ -1,4 +1,4 @@
-import React,{useEffect,useState,useCallback} from 'react';
+import React,{useEffect,useState} from 'react';
 import './App.css';
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
@@ -33,7 +33,7 @@ useEffect(()=>{
     setMovieList(data.results)
   }
   callMovie()
-},[])
+},[page,title,urlState])
 
   if (movieList==null){
     return( 
