@@ -1,4 +1,4 @@
-import React,{useEffect,useState} from 'react';
+import React,{useEffect,useState,useCallback} from 'react';
 import './App.css';
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
@@ -17,7 +17,6 @@ function App(url) {
   let [title,setSearchTitle] = useState(null)
 const callMovie = async()=>{
   let url = `https://api.themoviedb.org/3/${urlState}?api_key=7df18e01feebb6c6eec04a10e111222f&language=en-US&page=${page}${title}`
-  console.log(url)
   let result = await fetch (url)
   let data = await result.json()
   console.log("DATA", data)
@@ -25,8 +24,16 @@ const callMovie = async()=>{
   setMovieList(data.results)
 }
 useEffect(()=>{
+  const callMovie = async()=>{
+    let url = `https://api.themoviedb.org/3/${urlState}?api_key=7df18e01feebb6c6eec04a10e111222f&language=en-US&page=${page}${title}`
+    let result = await fetch (url)
+    let data = await result.json()
+    console.log("DATA", data)
+    setTotalPages(data.totalpages)
+    setMovieList(data.results)
+  }
   callMovie()
-},[urlState,page,title])
+},[])
 
   if (movieList==null){
     return( 
