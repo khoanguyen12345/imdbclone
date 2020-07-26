@@ -5,7 +5,7 @@ export default function MovieBoard(props) {
     let movieList = props.movieList;
     return (
         <div>
-        <div class = "movieBoard">
+        <div className = "movieBoard">
             {movieList.map(item=>{return(
                 <div><MovieCard movie ={item}></MovieCard></div>
             )})}
