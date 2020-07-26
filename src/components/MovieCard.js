@@ -48,10 +48,10 @@ export default function MovieCard(props) {
     return (
         <div>
             <Card style={{ width: '18rem',margin: '5px' }}>
-            <div class = "container">
-            <Card.Img class = "image" variant="top" src={`https://image.tmdb.org/t/p/w220_and_h330_face${item.poster_path}`} />
-            <div class ="overlay">
-                <div class = "text">{item.overview}</div>
+            <div className = "container">
+            <Card.Img className = "image" variant="top" src={`https://image.tmdb.org/t/p/w220_and_h330_face${item.poster_path}`} />
+            <div className ="overlay">
+                <div className = "text">{item.overview}</div>
             </div>
             </div>
             <Card.Body>
