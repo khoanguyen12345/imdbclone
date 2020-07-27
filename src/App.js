@@ -56,7 +56,7 @@ return (
              </Nav>
              <Form inline>
             <FormControl onChange={e => {searchString=e.target.value;}} type="text" placeholder="Search" className="mr-sm-2" />
-            <Button onClick ={()=>{{setUrlState(`search/movie`);setSearchTitle(`&query=${searchString}`);callMovie();}}} variant="outline-info">Search</Button>
+            <Button onClick ={()=>{setUrlState(`search/movie`);setSearchTitle(`&query=${searchString}`);callMovie();}} variant="outline-info">Search</Button>
              </Form>
              </Navbar>
           <div>
