@@ -55,3 +55,19 @@ card{
   margin:2px
 }
 
+.sliderContainer{
+  margin-right:100px;
+  display:flex;
+  flex-flow:row wrap;
+  justify-content: space-evenly;
+}
+
+#ratingFilter{
+  color:white;
+}
+
+.filterByRating{
+  margin-right:100px;
+  height:50%;
+  margin-left:10px;
+}
