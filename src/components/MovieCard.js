@@ -58,7 +58,7 @@ export default function MovieCard(props) {
             {genreArray}
             <Card.Title>{item.title}</Card.Title>
             <Card.Text>{date}</Card.Text>
-            <Card.Text>Rating: {Math.floor(item.popularity)}</Card.Text>
+            <Card.Text>Rating: {Math.floor(item.vote_average*10)}</Card.Text>
             </Card.Body>
             </Card>
         </div>
