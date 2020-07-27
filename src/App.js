@@ -1,4 +1,4 @@
-import React,{useEffect,useState,useCallback} from 'react';
+import React,{useEffect,useState} from 'react';
 import './App.css';
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
@@ -9,7 +9,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Button from 'react-bootstrap/Button';
 
 function App(url) {
-  let searchString=''
+  let searchString='';
   let [movieList,setMovieList] = useState(null)
   let [page,setPage] = useState(1)
   let [totalPages,setTotalPages] = useState(30)
