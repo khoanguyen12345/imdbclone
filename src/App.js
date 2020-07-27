@@ -19,7 +19,7 @@ function App(url) {
   let [title,setSearchTitle] = useState("")
   let [value, setValue] = useState(0.5)
 const callMovie = async()=>{
-  let url = `https://api.themoviedb.org/3/${urlState}?api_key=7df18e01feebb6c6eec04a10e111222f&language=en-US&page=${page}${title}`
+  let url = `https://api.themoviedb.org/3/${urlState}api_key=7df18e01feebb6c6eec04a10e111222f&language=en-US&page=${page}${title}`
   console.log(url)
   let result = await fetch (url)
   let data = await result.json()
@@ -67,7 +67,7 @@ return (
       
              <Form inline>
             <FormControl onChange={e => {searchString=e.target.value;}} type="text" placeholder="Search" className="mr-sm-2" />
-            <Button  onClick ={()=>{setUrlState(`search/movie?`);setSearchTitle(`&query=${searchString}`);callMovie();}} variant="outline-info">Search</Button>
+            <Button  onClick ={()=>{if(searchString!=""){setUrlState(`search/movie?`);setSearchTitle(`&query=${searchString}`)};callMovie();}} variant="outline-info">Search</Button>
              </Form>
              </Navbar>
              </div>
