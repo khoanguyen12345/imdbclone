@@ -25,6 +25,8 @@ const callMovie = async()=>{
   setMovieList(data.results)
 }
 useEffect(()=>{
+  //ignore the callMovie function in useEffect it said I needed a dependency and I didn't really wanna read up on life cycles and stuff so I just
+  //defined callMovie in here so netlify will stop complaining
   const callMovie = async()=>{
     let url = `https://api.themoviedb.org/3/${urlState}?api_key=7df18e01feebb6c6eec04a10e111222f&language=en-US&page=${page}${title}`
     console.log(url)
