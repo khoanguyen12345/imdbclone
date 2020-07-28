@@ -82,7 +82,7 @@ export default function MovieCard(props) {
         autoplay/>
         </Modal.Body>
         <Modal.Footer>
-        <Button onClick = {()=>{setModalOpen(false);handleClose}} variant="secondary">
+        <Button variant="secondary" onClick={handleClose}>
             Close
         </Button>
         </Modal.Footer>
